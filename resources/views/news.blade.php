@@ -64,109 +64,14 @@
           </form>
         </span>
 
-        <div class="col s12 m12 l12">
-          <div class="divider divider-margin"></div>
-          <span class="col s12 m12 l6">
-            <div class="card horizontal z-depth-0">
-              <div class="card-image card-image-news-container z-depth-3">
-                <img class="card-image-news" src="http://www.hyperdrivemedia.com/img/brochure/B002.jpg">
-              </div>
-            </div>
-          </span>
-          <span class="col s12 m12 l6">
-            <a href="#"><h5 class="card-title card-title-color">Održane 1. Križevačke Tehnološke Večeri</h5></a>
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>Prošlu subotu, održana je prva od pet Križevačkih Tehnoloških Večeri.
-                  Posjećenost je bila odlična i dojmovi su samo pozitivni.</p>
-              </div>
-            </div>
-            <div class="card-action">
-              <a href="#">Pročitaj više</a>
-            </div>
-          </span>
-        </div>
+        @foreach ($posts as $post)
+          @include('partials.post', ['post' => $post])
+        @endforeach
+
 
         <div class="col s12 m12 l12">
           <div class="divider divider-margin"></div>
-          <span class="col s12 m12 l6">
-            <div class="card horizontal z-depth-0">
-              <div class="card-image card-image-news-container z-depth-3">
-                <img class="card-image-news" src="https://i.pinimg.com/originals/00/18/f7/0018f74d342a487168d12e2ad1e40c23.jpg">
-              </div>
-            </div>
-          </span>
-          <span class="col s12 m12 l6">
-            <a href="#"><h5 class="card-title card-title-color">Održane 1. Križevačke Tehnološke Večeri</h5></a>
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>Prošlu subotu, održana je prva od pet Križevačkih Tehnoloških Večeri.
-                  Posjećenost je bila odlična i dojmovi su samo pozitivni.</p>
-              </div>
-            </div>
-            <div class="card-action">
-              <a href="#">Pročitaj više</a>
-            </div>
-          </span>
-        </div>
-
-        <div class="col s12 m12 l12">
-          <div class="divider divider-margin"></div>
-          <span class="col s12 m12 l6">
-            <div class="card horizontal z-depth-0">
-              <div class="card-image card-image-news-container z-depth-3">
-                <img class="card-image-news" src="https://i.pinimg.com/originals/64/39/a8/6439a8dcf1c78a6d0770027217d3fea8.jpg">
-              </div>
-            </div>
-          </span>
-          <span class="col s12 m12 l6">
-            <a href="#"><h5 class="card-title card-title-color">Održane 1. Križevačke Tehnološke Večeri</h5></a>
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>Prošlu subotu, održana je prva od pet Križevačkih Tehnoloških Večeri.
-                  Posjećenost je bila odlična i dojmovi su samo pozitivni.</p>
-              </div>
-            </div>
-            <div class="card-action">
-              <a href="#">Pročitaj više</a>
-            </div>
-          </span>
-        </div>
-
-        <div class="col s12 m12 l12">
-          <div class="divider divider-margin"></div>
-          <span class="col s12 m12 l6">
-            <div class="card horizontal z-depth-0">
-              <div class="card-image card-image-news-container z-depth-3">
-                <img class="card-image-news" src="http://www.ultrahdfreewallpapers.com/uploads/large/nature/nature-hd-background-0024.jpg">
-              </div>
-            </div>
-          </span>
-          <span class="col s12 m12 l6">
-            <a href="#"><h5 class="card-title card-title-color">Održane 1. Križevačke Tehnološke Večeri</h5></a>
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>Prošlu subotu, održana je prva od pet Križevačkih Tehnoloških Večeri.
-                  Posjećenost je bila odlična i dojmovi su samo pozitivni.</p>
-              </div>
-            </div>
-            <div class="card-action">
-              <a href="#">Pročitaj više</a>
-            </div>
-          </span>
-        </div>
-
-        <div class="col s12 m12 l12">
-          <div class="divider divider-margin"></div>
-          <ul class="pagination">
-            <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-            <li class="active blue darken-4"><a href="#!">1</a></li>
-            <li class="waves-effect"><a href="#!">2</a></li>
-            <li class="waves-effect"><a href="#!">3</a></li>
-            <li class="waves-effect"><a href="#!">4</a></li>
-            <li class="waves-effect"><a href="#!">5</a></li>
-            <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-          </ul>
+          {{ $posts->links() }}
         </div>
       </span>
 

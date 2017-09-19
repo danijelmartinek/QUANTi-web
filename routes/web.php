@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/news', function () {
-    return view('news');
-});
+Route::get('/news', 'BlogController@news');
 
 
 Route::group(['prefix' => 'admin'], function () {
