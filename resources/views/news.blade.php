@@ -48,12 +48,11 @@
     </ul>
   </div>
 
-  <div class="container">
-    <blockquote><h3 class="uppercase">Novosti</h3></blockquote>
-
+  <div class="container"><blockquote><h3 class="uppercase">Novosti</h3></blockquote></div>
+  <div class="container center">
     <div class="row">
 
-      <span class="col s12 m12 l8">
+      <span class="col s12 m7 l8">
         <span class="col s12 m5 l5">
           <form>
             <div class="input-field">
@@ -75,7 +74,7 @@
         </div>
       </span>
 
-      <span class="col s12 m6 l4 right">
+      <span class="col s12 m4 l4">
         <span class="col s12 m12 l12">
           <div class="card-panel">
               <div class="card-image"><img class="ad_container" src="http://hamuraagency.com/dist/frontend/images/icon/advertising.png"></div>

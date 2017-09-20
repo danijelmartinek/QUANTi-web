@@ -1,5 +1,5 @@
 
-<nav class="grey darken-3">
+<nav class="transparent navbar-absolute">
   <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
  <!--dropdown structure-->
@@ -23,15 +23,13 @@
 
   <div class="container">
     <div class="nav-wrapper row">
-      <div class="col s4 m2 l2"><a href="#!" class="brand-logo">Logo</a></div>
       <div class="col s6 m6 l6">
         <ul class="hide-on-med-and-down">
-          <li><a href="{{ url('/') }}">Početna</a></li>
           <li><a href="{{ url('/news') }}">Novosti</a></li>
           <li><a href="{{ url('/') }}">Događaji</a></li>
         </ul>
       </div>
-      <div class="col s2 m4 l4">
+      <div class="col s6 m6 l6">
         <ul class="right hide-on-med-and-down">
           @if (Auth::guest())
             <li><a href="{{ url('/login') }}">Login</a></li>
@@ -52,7 +50,6 @@
     <li class="no-padding">
       <ul class="collapsible collapsible-accordion">
 
-        <li class="bold"><a href="{{ url('/') }}" class="waves-effect waves-teal">Početna</a></li>
         <li class="bold"><a href="{{ url('/news') }}" class="waves-effect waves-teal">Novosti</a></li>
         <li class="bold"><a href="{{ url('/') }}" class="waves-effect waves-teal">Događaji</a></li>
 

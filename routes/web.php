@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/news', 'BlogController@news');
@@ -26,10 +26,6 @@ Route::group(['prefix' => 'admin'], function () {
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
 
 Auth::routes();
 
