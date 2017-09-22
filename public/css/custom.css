@@ -17,8 +17,17 @@ blockquote{
 }
 
 .first-parallax-container {
-  height: 95vh !important;
+  height: 100vh !important;
   min-width: 95vw !important;
+}
+
+.other-parallax-container{
+  height: 65vh !important;
+}
+
+.partners-logo{
+  width: 60%;
+  height: auto;
 }
 
 .navbar-absolute{
@@ -26,27 +35,16 @@ blockquote{
   z-index: 999;
 }
 
-.welcome-img{
+.mask-black{
+  position:absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: auto;
-  min-width: 100%;
-  background-position: center;
-  object-fit: cover;
-}
-
-.mask-black{
-position:absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-margin: auto;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.5);
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
 }
 
 .header-title {
@@ -579,3 +577,10 @@ footer h3 {
   margin-top: 10px;
 }
 /*---- Events page end ----*/
+
+
+
+/*---- Post page ----*/
+
+
+/*---- Post page end ----*/

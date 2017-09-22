@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/post', function () {
+    return view('post-page');
+});
+
 Route::get('/news', 'BlogController@news');
 
 

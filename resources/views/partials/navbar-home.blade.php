@@ -27,13 +27,15 @@
         <ul class="hide-on-med-and-down">
           <li><a href="{{ url('/news') }}">Novosti</a></li>
           <li><a href="{{ url('/') }}">Događaji</a></li>
+          <li><a href="{{ url('/') }}">Projekti</a></li>
+          <li><a href="{{ url('/') }}">Kontakt</a></li>
         </ul>
       </div>
       <div class="col s6 m6 l6">
         <ul class="right hide-on-med-and-down">
           @if (Auth::guest())
-            <li><a href="{{ url('/login') }}">Login</a></li>
-            <li><a href="{{ url('/register') }}">Register</a></li>
+            <li><a href="{{ url('/login') }}">Prijava</a></li>
+            <li><a href="{{ url('/register') }}">Registracija</a></li>
           @else
             <a class="dropdown-button" href="#!" data-activates="dropdown1">
               <img class="left" src="<?php echo e(Voyager::image( Auth::user()->avatar ));
