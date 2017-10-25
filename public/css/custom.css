@@ -17,7 +17,7 @@ blockquote{
 }
 
 .first-parallax-container {
-  height: 95vh !important;
+  height: 100vh !important;
   min-width: 95vw !important;
 }
 
@@ -567,12 +567,15 @@ footer h3 {
 /*---- News page end ----*/
 
 /*---- Events page ----*/
-
-#countdown{
-  float: bottom;
-  font-size: 2.5em;
+.material-icons-works{
+  font-size: 1.2em;
+  margin-top: 10px;
+  margin-right: 5px;
 }
 
+.events-thumbnail{
+  margin-top: 10px;
+}
 /*---- Events page end ----*/
 
 

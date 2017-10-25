@@ -26,7 +26,7 @@
       <div class="col s6 m6 l6">
         <ul class="hide-on-med-and-down">
           <li><a href="{{ url('/news') }}">Novosti</a></li>
-          <li><a href="{{ url('/events') }}">Događaji</a></li>
+          <li><a href="{{ url('/') }}">Događaji</a></li>
           <li><a href="{{ url('/') }}">Projekti</a></li>
           <li><a href="{{ url('/') }}">Kontakt</a></li>
         </ul>
@@ -53,7 +53,7 @@
       <ul class="collapsible collapsible-accordion">
 
         <li class="bold"><a href="{{ url('/news') }}" class="waves-effect waves-teal">Novosti</a></li>
-        <li class="bold"><a href="{{ url('/events') }}" class="waves-effect waves-teal">Događaji</a></li>
+        <li class="bold"><a href="{{ url('/') }}" class="waves-effect waves-teal">Događaji</a></li>
 
         <li class="divider"></li>
         @if (Auth::guest())

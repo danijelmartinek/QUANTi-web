@@ -75,7 +75,9 @@
                  */
                 if (this.settings.editing) {
                     $(this.form).on('submit', function(e) {
+                        e.preventDefault();
                         _this.prepareData();
+                        $(_this.form)[0].submit();
                     });
                 }
             },
