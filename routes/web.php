@@ -21,6 +21,9 @@ Route::get('/post', function () {
 
 Route::get('/news', 'BlogController@news');
 
+Route::get('/events', function () {
+    return view('events');
+});
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
@@ -35,6 +38,16 @@ Auth::routes();
 
 Route::get('/profile', 'UserController@profile');
 Route::post('/profile', 'UserController@update_avatar');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
 
 
 Route::group(['prefix' => 'admin'], function () {
