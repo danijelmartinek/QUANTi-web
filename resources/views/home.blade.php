@@ -59,7 +59,7 @@
        <div class="row">
          <div class="center animatable fadeIn"><h3>Čime se bavimo?</h3></div>
          <div class="center animatable fadeIn"><p>Prvenstveno se bavimo Android i Web programiranjem kojim želimo pomoći lokalnoj zajednici na način izrade web stranica ili mobilnih aplikacija za neprofitabilne organizacije i ustanove, obrtnike, manje ili veće tvrtke, ne samo na području grada Križevaca već i na području cijele Hrvatske.
-          <br> Uz navedene tehnologije područje interesa nam je i "Internet of Things" te "Machine Learning"<a href="#section3" class="scrollTo">.</a></p></div>
+          <br> Uz navedene tehnologije područje interesa nam je također i "Internet of Things" te "Machine Learning"<a href="#section3" class="scrollTo">.</a></p></div>
        </div>
       </div>
       </div>

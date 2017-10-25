@@ -18,7 +18,6 @@
   <div class="footer-copyright">
     <div class="container">
       Copyright © 2017 QUANTi
-    <p class="grey-text right">Website made by: <a class="grey-text text-lighten-4" href="#!"> Danijel Martinek</a></p>
     </div>
   </div>
 </footer>
