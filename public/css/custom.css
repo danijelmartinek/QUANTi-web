@@ -567,10 +567,13 @@ footer h3 {
 /*---- News page end ----*/
 
 /*---- Events page ----*/
-
 #countdown{
-  float: bottom;
-  font-size: 2.5em;
+  margin: 0 auto;
+  font-size: 2em;
+}
+
+.events-main-card-title{
+  margin-top: 10px;
 }
 
 /*---- Events page end ----*/
