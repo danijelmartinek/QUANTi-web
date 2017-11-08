@@ -48,18 +48,3 @@ Route::post('/profile', 'UserController@update_avatar');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
-
-
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
-
-
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
-
-
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});

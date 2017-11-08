@@ -30,7 +30,7 @@
         <div class="row">
           <div class="header-title txt-white">
             <h2>Inicijativa</h2>
-            <h1>{{ Voyager::setting('title') }}</h1>
+            <h1>{{ setting('site.title') }}</h1>
           </div>
           <a href="#section1" class="scrollTo"><div class="icon-scroll opacity-0-3 hover-opacity-1-0"></div></a>
         </div>

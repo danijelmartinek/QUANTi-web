@@ -23,7 +23,7 @@
 
   <div class="container">
     <div class="nav-wrapper row">
-      <div class="col s4 m2 l2"><a href="#!" class="brand-logo">Logo</a></div>
+      <div class="col s4 m2 l2"><a href="#!" class="brand-logo">{{ setting('site.title') }}</a></div>
       <div class="col s6 m6 l6">
         <ul class="hide-on-med-and-down">
           <li><a href="{{ url('/') }}">Početna</a></li>
