@@ -25,6 +25,11 @@ Route::get('/events', function () {
     return view('events');
 });
 
+Route::get('contact',
+  ['as' => 'contact', 'uses' => 'ContactController@create']);
+Route::post('contact',
+  ['as' => 'contact_store', 'uses' => 'ContactController@store']);
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

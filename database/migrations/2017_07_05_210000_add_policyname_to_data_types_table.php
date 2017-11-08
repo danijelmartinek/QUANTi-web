@@ -1,6 +1,8 @@
 <?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+
 class AddPolicyNameToDataTypesTable extends Migration
 {
     /**
@@ -14,6 +16,7 @@ class AddPolicyNameToDataTypesTable extends Migration
             $table->string('policy_name')->nullable()->after('model_name');
         });
     }
+
     /**
      * Reverse the migrations.
      *

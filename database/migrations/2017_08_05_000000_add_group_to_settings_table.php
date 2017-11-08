@@ -1,7 +1,9 @@
 <?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+
 class AddGroupToSettingsTable extends Migration
 {
     /**
@@ -15,6 +17,7 @@ class AddGroupToSettingsTable extends Migration
             $table->string('group')->nullable()->after('order');
         });
     }
+
     /**
      * Reverse the migrations.
      *

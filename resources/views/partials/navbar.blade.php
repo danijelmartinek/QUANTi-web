@@ -29,6 +29,7 @@
           <li><a href="{{ url('/') }}">Početna</a></li>
           <li><a href="{{ url('/news') }}">Novosti</a></li>
           <li><a href="{{ url('/events') }}">Događaji</a></li>
+          <li><a href="{{ url('/contact') }}">Kontakt</a></li>
         </ul>
       </div>
       <div class="col s2 m4 l4">
@@ -55,6 +56,7 @@
         <li class="bold"><a href="{{ url('/') }}" class="waves-effect waves-teal">Početna</a></li>
         <li class="bold"><a href="{{ url('/news') }}" class="waves-effect waves-teal">Novosti</a></li>
         <li class="bold"><a href="{{ url('/events') }}" class="waves-effect waves-teal">Događaji</a></li>
+        <li class="bold"><a href="{{ url('/contact') }}" class="waves-effect waves-teal">Kontakt</a></li>
 
         <li class="divider"></li>
         @if (Auth::guest())
