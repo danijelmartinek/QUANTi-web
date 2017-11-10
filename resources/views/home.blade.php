@@ -22,7 +22,7 @@
 
   <body>
 
-  @include('partials.navbar-home')
+  @include('partials.layout.navbar-home')
 
   <div>
     <div class="parallax-container first-parallax-container center valign-wrapper">
@@ -99,7 +99,7 @@
     </div>
   </div>
 
-    @include('partials.footer')
+    @include('partials.layout.footer')
 
 </body>
 

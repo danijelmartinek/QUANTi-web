@@ -1,3 +1,4 @@
+@if($post->featured == 0 & $post->status == "PUBLISHED")
 
 <div class="col s12 m12 l12">
   <div class="divider divider-margin"></div>
@@ -9,14 +10,16 @@
     </div>
   </span>
   <span class="col s12 m12 l6">
-    <a href="#"><h5 class="card-title card-title-color">{{ $post->title }}</h5></a>
+    <a href="/post/{{ $post->slug }}"><h5 class="card-title card-title-color">{{ $post->title }}</h5></a>
     <div class="card-stacked">
       <div class="card-content">
         <p>{{ $post->excerpt }}</p>
       </div>
     </div>
     <div class="card-action">
-      <a href="#">Pročitaj više</a>
+      <a href="/post/{{ $post->slug }}">Pročitaj više</a>
     </div>
   </span>
 </div>
+
+@endif

@@ -17,6 +17,8 @@
     <script src="http://yourdomain.com/materialize-css/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <script src="{{ URL::asset('js/jscroll/jquery.jscroll.js') }}"></script>
+
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -30,11 +32,11 @@
 </head>
 <body>
     <div id="app">
-      @include('partials.navbar')
+      @include('partials.layout.navbar')
 
       @yield('content')
 
-      @include('partials.footer')
+      @include('partials.layout.footer')
     </div>
 
     <!-- Scripts -->

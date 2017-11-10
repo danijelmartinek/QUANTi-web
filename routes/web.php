@@ -15,11 +15,9 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/post', function () {
-    return view('post-page');
-});
-
 Route::get('/news', 'BlogController@news');
+
+Route::get('/post/{slug}', 'BlogController@show');
 
 Route::get('/events', function () {
     return view('events');
