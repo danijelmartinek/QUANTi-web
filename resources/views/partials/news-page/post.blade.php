@@ -5,7 +5,7 @@
   <span class="col s12 m12 l6">
     <div class="card horizontal z-depth-0">
       <div class="card-image card-image-news-container z-depth-3">
-        <img class="card-image-news" src="{{ Voyager::image( $post->image ) }}">
+        <img class="card-image-news" src="{!! Voyager::image( $post->image ) !!}">
       </div>
     </div>
   </span>

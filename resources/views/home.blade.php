@@ -15,7 +15,6 @@
         <link href="{{ URL::asset('css/text-animation.css') }}"  rel="stylesheet">
         {!! MaterializeCSS::include_full() !!}
         <link rel="stylesheet" href="http://yourdomain.com/materialize-css/css/materialize.min.css">
-        <script src="http://yourdomain.com/materialize-css/js/materialize.min.js"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     </head>

@@ -477,6 +477,39 @@ footer h3 {
   display: inline-flex;
 }
 
+/*---- Login-Register ----*/
+.login-register{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #eeeeee;
+  border-top: 50px solid #eeeeee;
+  border-bottom: 50px solid #eeeeee;
+}
+
+.lr-title-line{
+  margin-bottom: 20px;
+}
+
+.input-field input[type=date]:focus + label,
+   .input-field input[type=text]:focus + label,
+   .input-field input[type=email]:focus + label,
+   .input-field input[type=password]:focus + label {
+     color: #e91e63;
+   }
+
+   .input-field input[type=date]:focus,
+   .input-field input[type=text]:focus,
+   .input-field input[type=email]:focus,
+   .input-field input[type=password]:focus {
+     border-bottom: 2px solid #e91e63;
+     box-shadow: none;
+   }
+
+   .create-acc{
+     margin-top: -30px;
+   }
+/*---- Login-Register end ----*/
+
 /*---- Home page ----*/
 .top-margin-10{
   margin-top: 100px;
@@ -514,7 +547,7 @@ footer h3 {
   padding: 10px;
   font-size: 150%;
 }
-.caption-news a{
+.caption-link-news{
   display:inline;
   background-color:rgba(0,0,0,0.7);
   font-size: 1em;
@@ -564,6 +597,10 @@ footer h3 {
 .card-title{
   margin-bottom: 30px !important;
 }
+
+.featured-post-title{
+  color: #ffffff !important;
+}
 /*---- News page end ----*/
 
 /*---- Events page ----*/
@@ -581,6 +618,394 @@ footer h3 {
 
 
 /*---- Post page ----*/
+.postpage-bg-card{
+  margin-top: 60px;
+}
 
+.postpage-main-image{
+  width: 100%;
+  height: auto;
+}
+
+.postpage-main-img-bg{
+  margin-top: -50px;
+}
+
+.postpage-title{
+  background-color: rgba(0,0,0,0.5);
+  margin-left: 11.5px;
+  margin-bottom: 10px !important;
+  font-size: 1.2em !important;
+  max-width: 70% !important;
+}
+
+.post-page-infobox{
+  bottom: 0;
+  right: 0;
+  color: #9e9e9e;
+  background-color: #eeeeee;
+  padding: 10px;
+  border-right: 3px solid #0288d1;
+}
+
+.post-page-infobox p{
+  margin: 0 auto;
+}
+
+.postpage-card-content{
+  color: #757575;
+  border-right: 3px solid #0288d1;
+  padding-right: 20px;
+}
+
+.postpage-card-content p{
+    padding-top: 30px;
+}
+
+.postpage-ad{
+  text-align: center;
+  margin: 0 auto;
+}
+
+#containingDiv>p>img {
+    width: 100% !important;
+    height: auto !important;
+}
+#containingDiv>p>iframe {
+    width: 100% !important;
+    height: 20vw !important;
+    min-height: 20px !important;
+    float: right;
+}
+/*-- Sharing buttons --*/
+.resp-sharing-button__link,
+.resp-sharing-button__icon {
+  display: inline-block
+}
+
+.resp-sharing-button__link {
+  text-decoration: none;
+  color: #fff;
+  margin: 0.5em
+}
+
+.resp-sharing-button {
+  border-radius: 5px;
+  transition: 25ms ease-out;
+  padding: 0.5em 0.75em;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif
+}
+
+.resp-sharing-button__icon svg {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.4em;
+  vertical-align: top
+}
+
+.resp-sharing-button--small svg {
+  margin: 0;
+  vertical-align: middle
+}
+
+/* Non solid icons get a stroke */
+.resp-sharing-button__icon {
+  stroke: #fff;
+  fill: none
+}
+
+/* Solid icons get a fill */
+.resp-sharing-button__icon--solid,
+.resp-sharing-button__icon--solidcircle {
+  fill: #fff;
+  stroke: none
+}
+
+.resp-sharing-button--twitter {
+  background-color: #55acee
+}
+
+.resp-sharing-button--twitter:hover {
+  background-color: #2795e9
+}
+
+.resp-sharing-button--pinterest {
+  background-color: #bd081c
+}
+
+.resp-sharing-button--pinterest:hover {
+  background-color: #8c0615
+}
+
+.resp-sharing-button--facebook {
+  background-color: #3b5998
+}
+
+.resp-sharing-button--facebook:hover {
+  background-color: #2d4373
+}
+
+.resp-sharing-button--tumblr {
+  background-color: #35465C
+}
+
+.resp-sharing-button--tumblr:hover {
+  background-color: #222d3c
+}
+
+.resp-sharing-button--reddit {
+  background-color: #5f99cf
+}
+
+.resp-sharing-button--reddit:hover {
+  background-color: #3a80c1
+}
+
+.resp-sharing-button--google {
+  background-color: #dd4b39
+}
+
+.resp-sharing-button--google:hover {
+  background-color: #c23321
+}
+
+.resp-sharing-button--linkedin {
+  background-color: #0077b5
+}
+
+.resp-sharing-button--linkedin:hover {
+  background-color: #046293
+}
+
+.resp-sharing-button--email {
+  background-color: #777
+}
+
+.resp-sharing-button--email:hover {
+  background-color: #5e5e5e
+}
+
+.resp-sharing-button--xing {
+  background-color: #1a7576
+}
+
+.resp-sharing-button--xing:hover {
+  background-color: #114c4c
+}
+
+.resp-sharing-button--whatsapp {
+  background-color: #25D366
+}
+
+.resp-sharing-button--whatsapp:hover {
+  background-color: #1da851
+}
+
+.resp-sharing-button--hackernews {
+background-color: #FF6600
+}
+.resp-sharing-button--hackernews:hover, .resp-sharing-button--hackernews:focus {   background-color: #FB6200 }
+
+.resp-sharing-button--vk {
+  background-color: #507299
+}
+
+.resp-sharing-button--vk:hover {
+  background-color: #43648c
+}
+
+.resp-sharing-button--facebook {
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+
+.resp-sharing-button--facebook:hover,
+.resp-sharing-button--facebook:active {
+  background-color: #2d4373;
+  border-color: #2d4373;
+}
+
+.resp-sharing-button--twitter {
+  background-color: #55acee;
+  border-color: #55acee;
+}
+
+.resp-sharing-button--twitter:hover,
+.resp-sharing-button--twitter:active {
+  background-color: #2795e9;
+  border-color: #2795e9;
+}
+
+.resp-sharing-button--google {
+  background-color: #dd4b39;
+  border-color: #dd4b39;
+}
+
+.resp-sharing-button--google:hover,
+.resp-sharing-button--google:active {
+  background-color: #c23321;
+  border-color: #c23321;
+}
+/*-- Sharing buttons end*/
+
+/*-- Gallery --*/
+.g-thumbnail {
+  float: left;
+  width: 150px;
+}
+
+/* The Modal (background) */
+.g-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.g-modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  max-width: 50vw;
+}
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+  .g-modal-content {
+    max-width: 100vw;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+  .g-modal-content {
+    max-width: 100vw;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .g-modal-content {
+    max-width: 65vw;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  .g-modal-content {
+    max-width: 55vw;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  .g-modal-content {
+    max-width: 55vw;
+  }
+}
+
+/* The Close Button */
+.g-close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.g-close:hover,
+.g-close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.g-mySlides {
+  display: none;
+}
+
+.g-cursor {
+  cursor: pointer
+}
+
+/* Next & previous buttons */
+.g-prev,
+.g-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.g-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.g-prev:hover,
+.g-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.g-numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.g-img {
+  margin-bottom: -10px;
+}
+
+.g-caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.g-demo {
+  opacity: 0.6;
+}
+
+.g-active,
+.g-demo:hover {
+  opacity: 1;
+}
+
+img.g-hover-shadow {
+  transition: 0.3s
+}
+
+.g-hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+/*-- Gallery end --*/
 
 /*---- Post page end ----*/

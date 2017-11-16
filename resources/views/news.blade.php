@@ -60,6 +60,10 @@
 </div>
 
 <script type="text/javascript">
+    $(document).ready(function(){
+    $('.slider').slider();
+    });
+    
     $('ul.pagination').hide();
     $(function() {
         $('.infinite-scroll').jscroll({

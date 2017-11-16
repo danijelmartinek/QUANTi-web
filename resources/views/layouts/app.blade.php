@@ -11,35 +11,30 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ URL::asset('css/custom.css') }}"  rel="stylesheet">
     {!! MaterializeCSS::include_full() !!}
+    <link href="{{ URL::asset('css/custom.css') }}"  rel="stylesheet">
     <link rel="stylesheet" href="http://yourdomain.com/materialize-css/css/materialize.min.css">
-    <script src="http://yourdomain.com/materialize-css/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <script src="{{ URL::asset('js/jscroll/jquery.jscroll.js') }}"></script>
+    <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.min.css') }}">
 
     <!-- Scripts -->
+    <script src="{{ URL::asset('js/jscroll/jquery.jscroll.js') }}"></script>
+
     <script>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
         ]); ?>
-
-        $(document).ready(function(){
-          $('.slider').slider();
-        });
     </script>
 </head>
 <body>
     <div id="app">
+
       @include('partials.layout.navbar')
-
       @yield('content')
-
       @include('partials.layout.footer')
+
     </div>
 
-    <!-- Scripts -->
     <script type="text/javascript">
       $(document).ready(function() {
           $(".dropdown-button").dropdown();

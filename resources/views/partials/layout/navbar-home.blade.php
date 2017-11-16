@@ -4,9 +4,11 @@
 
  <!--dropdown structure-->
   <ul id="dropdown1" class="dropdown-content">
-    @if((auth()->user()->role_id) == 6 )
-    @else
-      <li class="bold"><a href="{{ url('/admin') }}" class="waves-effect waves-teal">Dashboard</a></li>
+    @if (Auth::check() == 'true')
+      @if((auth()->user()->role_id) == 6 )
+      @else
+        <li class="bold"><a href="{{ url('/admin') }}" class="waves-effect waves-teal">Dashboard</a></li>
+      @endif
     @endif
     <li><a href="{{ url('/profile') }}"><i class="voyager voyager-person"></i>
              Profile
@@ -29,10 +31,7 @@
     <div class="nav-wrapper row">
       <div class="col s6 m6 l6">
         <ul class="hide-on-med-and-down">
-          <li><a href="{{ url('/news') }}">Novosti</a></li>
-          <li><a href="{{ url('/events') }}">Događaji</a></li>
-          <li><a href="{{ url('/') }}">Projekti</a></li>
-          <li><a href="{{ url('/') }}">Kontakt</a></li>
+          {{  menu('home-page') }}
         </ul>
       </div>
       <div class="col s6 m6 l6">
@@ -56,17 +55,18 @@
     <li class="no-padding">
       <ul class="collapsible collapsible-accordion">
 
-        <li class="bold"><a href="{{ url('/news') }}" class="waves-effect waves-teal">Novosti</a></li>
-        <li class="bold"><a href="{{ url('/events') }}" class="waves-effect waves-teal">Događaji</a></li>
+      {{  menu('home-page') }}
 
         <li class="divider"></li>
         @if (Auth::guest())
-          <li class="bold"><a href="{{ url('/login') }}" class="waves-effect waves-teal">Login</a></li>
-          <li class="bold"><a href="{{ url('/register') }}" class="waves-effect waves-teal">Register</a></li>
+          <li class="bold"><a href="{{ url('/login') }}" class="waves-effect waves-teal">Prijava</a></li>
+          <li class="bold"><a href="{{ url('/register') }}" class="waves-effect waves-teal">Registracija</a></li>
         @else
-          @if((auth()->user()->role_id) == 6 )
-          @else
-            <li class="bold"><a href="{{ url('/admin') }}" class="waves-effect waves-teal">Dashboard</a></li>
+          @if (Auth::check() == 'true')
+            @if((auth()->user()->role_id) == 6 )
+            @else
+              <li class="bold"><a href="{{ url('/admin') }}" class="waves-effect waves-teal">Dashboard</a></li>
+            @endif
           @endif
         <li class="bold"><a href="{{ url('/profile') }}" class="waves-effect waves-teal">Profile</a></li>
         <li class="bold"><a href="{{ url('/logout') }}" class="waves-effect waves-teal">Logout</a></li>

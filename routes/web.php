@@ -19,9 +19,7 @@ Route::get('/news', 'BlogController@news');
 
 Route::get('/post/{slug}', 'BlogController@show');
 
-Route::get('/events', function () {
-    return view('events');
-});
+Route::get('/events', 'EventController@events');
 
 Route::get('contact',
   ['as' => 'contact', 'uses' => 'ContactController@create']);
