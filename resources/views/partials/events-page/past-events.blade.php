@@ -23,15 +23,22 @@
       <div class="col s12 m12 l12"><br></div>
       <div class="col s12 m12 l12" style="opacity: 0.2;"><hr></div>
       <div class="col s12 m12 l12"><br></div>
-
+      <img class="col s12 m12 l12" width="100%" src="{!! Voyager::image( $event->poster ) !!}">
+      <div class="col s12 m12 l12"><br></div>
+      <div class="col s12 m12 l12">{{ $event->description }}</div>
+      <div class="col s12 m12 l12"><br></div>
+      <div class="col s12 m12 l12" style="opacity: 0.2;"><hr></div>
+      <div class="col s12 m12 l12"><br></div>
       <div class="col s12 m12 l12">{!! $event->info !!}</div>
 
         <div class="col s12 m12 l12"><br></div>
         <div class="col s12 m12 l12" style="opacity: 0.2;"><hr></div>
 
-        @foreach(json_decode($event->images, true) as $image)
-          <img class="materialboxed events-thumbnail col s6 m4 l3" width="150" src="{!! Voyager::image( $image ) !!}">
-        @endforeach
+        @if(($event->images) != NULL)
+          @foreach(json_decode($event->images, true) as $image)
+            <img class="materialboxed events-thumbnail col s6 m4 l3" width="150" src="{!! Voyager::image( $image ) !!}">
+          @endforeach
+        @endif
 
     </div>
   </div>

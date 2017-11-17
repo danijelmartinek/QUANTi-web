@@ -65,9 +65,6 @@
           <div id="containingDiv" class="col s12 m8 l8">
             {!! $post->body !!}
           </div>
-          <div class="col s12 m12 l12">
-            <!-- @include('partials.post-page.gallery') -->
-          </div>
       </div>
     </div>
 
