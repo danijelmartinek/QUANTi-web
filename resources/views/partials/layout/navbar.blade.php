@@ -1,5 +1,5 @@
 
-<nav class="grey darken-3">
+<nav class="{{ setting('site-styling.layout_color') }}">
   <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
  <!--dropdown structure-->

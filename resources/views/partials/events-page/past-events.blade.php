@@ -6,18 +6,18 @@
     <div class="row">
 
       <div class="col s12 m3 l3 center">
-        <span><i class="material-icons material-icons-works">place</i>{{ $event->location }}</span>
+        <span><i class="fa fa-map-marker" aria-hidden="true"></i> {{ $event->location }}</span>
       </div>
       <div class="col s12 m3 l3 center">
-        <span><i class="material-icons material-icons-works">event</i>{{ $event->date->format('d.m.Y.') }}</span>
+        <span><i class="fa fa-calendar-check-o" aria-hidden="true"></i> {{ $event->date->format('d.m.Y.') }}</span>
         <br>
-        <span><i class="material-icons material-icons-works">schedule</i>{{ $event->time }}</span>
+        <span><i class="fa fa-clock-o" aria-hidden="true"></i> {{ $event->time }}</span>
       </div>
       <div class="col s12 m3 l3 center">
-        <span><i class="material-icons material-icons-works">record_voice_over</i>{{ $event->instructor }}</span>
+        <span><i class="fa fa-microphone" aria-hidden="true"></i> {{ $event->instructor }}</span>
       </div>
       <div class="col s12 m3 l3 center">
-        <span><i class="material-icons material-icons-works">attach_money</i>{{ $event->price }}</span>
+        <span><i class="fa fa-usd" aria-hidden="true"></i> {{ $event->price }}</span>
       </div>
 
       <div class="col s12 m12 l12"><br></div>
