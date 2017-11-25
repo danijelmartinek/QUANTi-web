@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'QUANTi'),
 
     /*
     |--------------------------------------------------------------------------
@@ -230,6 +230,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'MaterializeCSS' => Skydiver\LaravelMaterializeCSS\MaterializeCSS::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'Carbon' => 'Carbon\Carbon',
 
     ],
 

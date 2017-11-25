@@ -1,0 +1,30 @@
+body {
+  font-family: 'Roboto', Open sans, Helvetica, Arial, sans-serif;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/*----Notifications admin page ----*/
+.notifications-featured-title{
+  color: #2196f3;
+}
+.notifications-featured{
+  border: 2px solid #2196f3;
+}
+.notifications{
+  margin-top: 50px;
+}
+
+.notification-new{
+  color: #4caf50;
+  font-size: 12px;
+  margin-top: 0.5em;
+}
+.notification-message{
+  padding: 1em;
+}
+.notification-date{
+  font-size: 0.7em;
+  padding: 1em;
+}
+/*---- Notifications admin page end ----*/

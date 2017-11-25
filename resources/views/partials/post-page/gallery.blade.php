@@ -1,69 +1,79 @@
-
-@foreach(json_decode($post->gallery, true) as $gallery)
-  <div class="g-thumbnail">
-    <img src="{!! Voyager::image( $gallery ) !!}" style="width:100%" onclick="openModal();currentSlide(1)" class="g-hover-shadow cursor">
-  </div>
-
-
-<div id="myModal" class="g-modal">
-  <span class="g-close g-cursor" onclick="closeModal()">&times;</span>
-  <div class="g-modal-content">
-
-    <div class="g-mySlides">
-      <div class="g-numbertext">1 / 4</div>
-      <img class="g-img" src="{!! Voyager::image( $gallery ) !!}" style="width:100%">
-    </div>
-
-    <a class="g-prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="g-next" onclick="plusSlides(1)">&#10095;</a>
-
-    <div class="g-caption-container">
-      <p id="caption"></p>
-    </div>
-
-    <div class="g-thumbnail">
-      <img class="g-demo g-cursor g-img" src="{!! Voyager::image( $gallery ) !!}" style="width:100%" onclick="currentSlide(2)" alt="Northern Lights">
-    </div>
-  </div>
+<div class="col s12 m8 l8">
+  <h5>GALERIJA</h5>
+  <ul id="lightSlider">
+  @foreach(json_decode($post->gallery, true) as $image)
+    <a href="{!! Voyager::image( $image ) !!}" class="carousel-item" data-rel="lightcase:myCollection">
+        <li><img src="{!! Voyager::image(App\Post::thumbnail($image, 'cropped')) !!}"></li>
+    </a>
+  @endforeach
+  </ul>
 </div>
-@endforeach
 
 
-<script>
-function openModal() {
-  document.getElementById('myModal').style.display = "block";
-}
 
-function closeModal() {
-  document.getElementById('myModal').style.display = "none";
-}
 
-var slideIndex = 1;
-showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("g-mySlides");
-  var dots = document.getElementsByClassName("g-demo");
-  var captionText = document.getElementById("g-caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$('a[data-rel^=lightcase]').lightcase({
+  	swipe: true
+    });
+	});
+  $(document).ready(function(){
+    $('.carousel').carousel();
+    $("#lightSlider").lightSlider({
+        item: 4,
+        autoWidth: false,
+        slideMove: 1, // slidemove will be 1 if loop is true
+        slideMargin: 10,
+
+        addClass: '',
+        mode: "slide",
+        useCSS: true,
+        cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
+        easing: 'linear', //'for jquery animation',////
+
+        speed: 400, //ms'
+        auto: false,
+        loop: false,
+        slideEndAnimation: true,
+        pause: 2000,
+
+        keyPress: false,
+        controls: true,
+        prevHtml: '',
+        nextHtml: '',
+
+        rtl:false,
+        adaptiveHeight:true,
+
+        vertical:false,
+        verticalHeight:500,
+        vThumbWidth:100,
+
+        thumbItem:10,
+        pager: true,
+        gallery: false,
+        galleryMargin: 5,
+        thumbMargin: 5,
+        currentPagerPosition: 'middle',
+
+        enableTouch:true,
+        enableDrag:true,
+        freeMove:true,
+        swipeThreshold: 40,
+
+        responsive : [],
+
+        onBeforeStart: function (el) {},
+        onSliderLoad: function (el) {},
+        onBeforeSlide: function (el) {},
+        onAfterSlide: function (el) {},
+        onBeforeNextSlide: function (el) {},
+        onBeforePrevSlide: function (el) {}
+    });
+
+    });
 </script>

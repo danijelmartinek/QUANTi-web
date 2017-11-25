@@ -65,6 +65,12 @@
           <div id="containingDiv" class="col s12 m8 l8">
             {!! $post->body !!}
           </div>
+
+          <div class="col s12 m8 l8 divider"></div>
+          @if((json_decode($post->gallery, true)) != NULL)
+              @include('partials.post-page.gallery')
+          @endif
+
       </div>
     </div>
 

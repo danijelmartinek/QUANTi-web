@@ -18,4 +18,5 @@ class BlogController extends Controller
         $post = Post::findBySlug($slug);
         return view('post-page', ['post' => $post]);
     }
+
 }

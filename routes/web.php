@@ -30,16 +30,21 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
-
 Auth::routes();
 
-Route::get('/profile', 'UserController@profile');
-Route::post('/profile', 'UserController@update_avatar');
+Route::group(['middleware' => 'auth'], function () {
 
+    // All my routes that needs a logged in user
+    Route::get('/profile', 'UserController@profile');
+    Route::post('/profile', 'UserController@update_avatar');
+
+    Route::get('/membership/register', 'MembershipController@index');
+    Route::post('/membership/register', 'MembershipController@register_member');
+
+    Route::get('/membership', 'MembershipController@member');
+
+
+});
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

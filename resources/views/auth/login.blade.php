@@ -31,10 +31,12 @@
                     @endif
                 </div>
 
+                <!--
                 <p class="col s12">
                   <input type="checkbox" id="remember" name="remember" />
                   <label for="remember">Zapamti me</label>
                 </p>
+                -->
 
                 <div class="input-field col s12">
                     <button type="submit" class="btn waves-effect waves-light indigo">Prijavi se</button>

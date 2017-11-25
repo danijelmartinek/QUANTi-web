@@ -121,7 +121,7 @@
             <div class="col s11 m5 l5">
               <br><br>
               <p>Postani članom naše inicijative! </p>
-              <div class="center"  onclick="location.href='/';"><a class="waves-effect waves-light btn indigo">UČLANI SE</a></div>
+              <div class="center"  onclick="location.href='{{ url('/membership/register') }}';"><a class="waves-effect waves-light btn indigo">UČLANI SE</a></div>
             </div>
         </div>
     </div>

@@ -8,17 +8,23 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ Voyager::setting('site.title') }}</title>
+    <link rel="icon" href="{{ Voyager::image(setting('site.logo')) }}">
 
     <!-- Styles -->
     {!! MaterializeCSS::include_full() !!}
-    <link href="{{ URL::asset('css/custom.css') }}"  rel="stylesheet">
+    <link href="{{ URL::asset('css/custom.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="http://yourdomain.com/materialize-css/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.min.css') }}">
+    <link href="{{ URL::asset('js/lightcase/src/css/lightcase.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('js/lightslider/src/css/lightslider.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script src="{{ URL::asset('js/jscroll/jquery.jscroll.js') }}"></script>
+    <script src="{{ URL::asset('js/lightcase/src/js/lightcase.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/lightcase/vendor/jQuery/jquery.events.touch.js') }}"></script>
+    <script src="{{ URL::asset('js/lightslider/src/js/lightslider.js') }}"></script>
 
     <script>
         window.Laravel = <?php echo json_encode([
