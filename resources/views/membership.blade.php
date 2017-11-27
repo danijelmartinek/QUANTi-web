@@ -1,45 +1,32 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container" style="height: 100%;">
         <div class="row">
-            @if(($member->approved) == 1 )
-            <div class="col s12 m6 l6" style="margin-top: 50px; margin-bottom: 50px;">
-                <h5>Kontaktirajte nas</h5>
-                <div class="divider"></div>
-                <br>
-                <form action="{{ url('contact') }}" method="POST" class="contact">
-                    {{ csrf_field() }}
-                    <div class="form-group">
-                        <label name="subject">Ime i prezime</label>
-                        <input id="name" name="name" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label name="email">Email:</label>
-                        <input id="email" name="email" class="form-control">
-                    </div>
-
-                    <div class="form-group">
-                        <label name="message">Sadržaj:</label>
-                        <textarea class="height: 200px;"></textarea>
-                    </div>
-
-                    <input type="submit" value="Pošalji" class="btn btn-success">
-                </form>
+            @if(($member->approved) == 0 )
+            <div class="col s12 m12 l12 center notapproved-card">
+              <div class="card">
+                 <div class="card-content">
+                   <span class="card-title">PRIJAVA USPJEŠNO POSLANA!</span>
+                   <p>
+                     <b>Molimo pričekajte odobrenje članstva nadležnih osoba.</b><br><br>
+                     <span> Obavijest o članstvu dobit ćete na vašu e-mail adresu: <i>{{ $member -> email }}</i> </span>
+                   </p>
+                 </div>
+               </div>
+            </div>
+            @elseif(($member->approved) == 1 )
+            <div class="col s12 m12 l12 center notapproved-card">
+              <div class="card">
+                 <div class="card-content">
+                   <span class="card-title">DOBRO DOŠLI U <b>QUANTi</b>!</span>
+                   <p>Vaš zahtjev za članstvo u QUANTi inicijativu je odobren.</p><br>
+                   <p>Na linku <a href="/admin" target="_blank">Dashboard</a> možete vidjeti obavijesti, postojeće članove, pisati postove i još mnogo toga.</p><br>
+                   <p>Također nam se priključite na našem <a href="https://quanti-kz.slack.com/messages/C7345GS3C/" target="_blank">Slack</a> chatu gdje raspravljamo o našoj inicijativi i o svemu vezanom uz nju.</p>
+                 </div>
+               </div>
             </div>
             @endif
-
-            <div class="col s1 m1 l1">
-              <div class="vdivider center"></div>
-            </div>
-            <br><br>
-
-            <div class="col s11 m5 l5 divider"></div>
-            <div class="col s11 m5 l5">
-              <br><br>
-              <p>Postani članom naše inicijative! </p>
-              <div class="center"  onclick="location.href='{{ url('/membership/register') }}';"><a class="waves-effect waves-light btn indigo">UČLANI SE</a></div>
-            </div>
         </div>
     </div>
 

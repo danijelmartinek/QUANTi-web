@@ -14,6 +14,7 @@
     <!-- Styles -->
     {!! MaterializeCSS::include_full() !!}
     <link href="{{ URL::asset('css/custom.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/custom-pages.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="http://yourdomain.com/materialize-css/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.min.css') }}">

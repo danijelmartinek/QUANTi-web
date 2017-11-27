@@ -56,13 +56,11 @@
               </div>
             </div>
           </div>
+          <div class="col s12 m12 l12 divider"></div>
 
-          <div class="col s12 m12 l12 postpage-ad">
-              <br /><br />
-              <div class="divider"></div>
-            <img style="width:100%;" src="{{ URL::asset('img/ad_leaderboard.jpg') }}">
-          </div>
-          <div id="containingDiv" class="col s12 m8 l8">
+
+          <div id="containingDiv" class="col s12 m12 l8">
+            <br><br>
             {!! $post->body !!}
           </div>
 

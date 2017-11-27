@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col s12 m8 l8 card" style="height: 1000px;">
             <div class="panel panel-default">
                 <div class="panel-body">
                 <img src="<?php echo e(Voyager::image( Auth::user()->avatar )); ?>" style="width:150px; height:150px; float: left; border-radius: 50%; margin-right: 25px;">
