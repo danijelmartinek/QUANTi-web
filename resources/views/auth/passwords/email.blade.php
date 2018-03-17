@@ -11,7 +11,8 @@
                 <div class="panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">
-                            {{ session('status') }}
+                            Uspješno Vam je poslan reset link!
+                            <br /><small>Ukoliko ne možete pronaći mail, provjerite pod "spam".</small>
                         </div>
                     @endif
 

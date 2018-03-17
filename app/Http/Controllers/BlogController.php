@@ -15,8 +15,10 @@ class BlogController extends Controller
 
     public function show($slug)
     {
-        $post = Post::findBySlug($slug);
-        return view('post-page', ['post' => $post]);
+        $post = POST::findBySlug($slug);
+        $other_posts = POST::where('id','!=', $post->id )->orderBy('created_at', 'desc')->where('status', 'PUBLISHED' )->paginate(3);
+        return view('post-page', ['post' => $post, 'other_posts' => $other_posts]);
     }
 
 }
+

@@ -21,14 +21,9 @@ Route::get('/post/{slug}', 'BlogController@show');
 
 Route::get('/events', 'EventController@events');
 
-Route::get('contact',
-  ['as' => 'contact', 'uses' => 'ContactController@create']);
-Route::post('contact',
-  ['as' => 'contact_store', 'uses' => 'ContactController@store']);
+Route::get('contact','ContactController@view');
+Route::post('contact','ContactController@sendMail');
 
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
 
 Auth::routes();
 
@@ -43,7 +38,10 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/membership', 'MembershipController@member');
 
-
+    // Admin routes
+    Route::get('/admin/gmail', function () {
+        return view('gmail');
+    });
 });
 
 Route::group(['prefix' => 'admin'], function () {

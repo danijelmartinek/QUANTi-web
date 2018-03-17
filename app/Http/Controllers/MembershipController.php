@@ -29,7 +29,7 @@ class MembershipController extends Controller
 
         $new_member -> save();
 
-        return Redirect::to('/');
+        return Redirect::to('/membership');
     	}
 
       public function member(){

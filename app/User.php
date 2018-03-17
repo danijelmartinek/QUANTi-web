@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Notifications\ResetPassword as ResetPasswordNotification;
 
 class User extends \TCG\Voyager\Models\User
 {
@@ -26,4 +27,14 @@ class User extends \TCG\Voyager\Models\User
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function sendPasswordResetNotification($token)
+
+    {
+
+        // Your your own implementation.
+
+        $this->notify(new ResetPasswordNotification($token));
+
+    }
 }

@@ -1,3 +1,9 @@
+<head>
+
+	<title>Zahtjev za članstvo</title>
+
+</head>
+
 @extends('layouts.app')
 
 @section('content')

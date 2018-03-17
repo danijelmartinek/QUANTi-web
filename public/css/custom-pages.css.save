@@ -58,7 +58,7 @@
 
 [id^=section]{
 
-            font-size: 1em;
+     font-size: 1em;
 
             line-height: 150%;
 
@@ -174,11 +174,13 @@
 
         .without-p-img img{
 
-            width: 100vw !important;
+            width: 150vw !important;
 
             height: auto !important;
 
-     	}
+            margin-left: -25vw !important;
+
+        }
 
 /*---- Home page end ----*/
 
@@ -324,10 +326,6 @@
   height: auto !important;
 }
 
-#containingDiv strong{
-    font-weight: bold;
-}
-
 #containingDiv>p>img {
     width: 100% !important;
     height: auto !important;
@@ -335,15 +333,9 @@
 
 #containingDiv>p>iframe {
     width: 100% !important;
-    height: auto !important;
-    min-height: 20vh !important;
-    float: left;
-}
-
-@media only screen and (min-width: 500px){
-	#containingDiv>p>iframe{
-		min-height: 40vh !important;
-	}
+    height: 20vw !important;
+    min-height: 20px !important;
+    float: right;
 }
 
 /*---- Post page end ----*/
@@ -371,74 +363,3 @@
   margin-bottom: 25vh;
 }
 /*---- Membership page end ----*/
-
-
-/*---- 404 page ----*/
-.error404{
-  margin-top: 30vh;
-}
-
-.error404 b{
-  font-size: 2em;
-  padding: 10px;
-  border: 5px solid transparent;
-  -moz-border-image: -moz-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
-  -webkit-border-image: -webkit-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
-  border-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%);
-  border-image-slice: 1;
-
-
-  background: rgba(255,94,236,1);
-  background: -moz-linear-gradient(-45deg, rgba(255,94,236,1) 0%, rgba(94,140,255,1) 38%, rgba(94,172,255,1) 66%, rgba(7,235,197,1) 100%);
-  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,94,236,1)), color-stop(38%, rgba(94,140,255,1)), color-stop(66%, rgba(94,172,255,1)), color-stop(100%, rgba(7,235,197,1)));
-  background: -webkit-linear-gradient(-45deg, rgba(255,94,236,1) 0%, rgba(94,140,255,1) 38%, rgba(94,172,255,1) 66%, rgba(7,235,197,1) 100%);
-  background: -o-linear-gradient(-45deg, rgba(255,94,236,1) 0%, rgba(94,140,255,1) 38%, rgba(94,172,255,1) 66%, rgba(7,235,197,1) 100%);
-  background: -ms-linear-gradient(-45deg, rgba(255,94,236,1) 0%, rgba(94,140,255,1) 38%, rgba(94,172,255,1) 66%, rgba(7,235,197,1) 100%);
-  background: linear-gradient(135deg, rgba(255,94,236,1) 0%, rgba(94,140,255,1) 38%, rgba(94,172,255,1) 66%, rgba(7,235,197,1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.error404-text{
-  margin-top: 1em;
-  font-size: 2em;
-}
-
-.error404-button{
-  margin-top: 2em;
-  font-size: 1em;
-  font-weight: bold;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 0.3em;
-  border: 5px solid transparent;
-  -moz-border-image: -moz-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
-  -webkit-border-image: -webkit-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
-  border-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%);
-  border-image-slice: 1;
-}
-
-.error404-button a:hover{
-  color: #3f51b5;
-}
-
-@media only screen and (min-width: 500px){
-  .error404 b{
-    font-size: 7em;
-    padding: 20px;
-    border: 10px solid transparent;
-    -moz-border-image: -moz-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
-    -webkit-border-image: -webkit-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
-    border-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%);
-    border-image-slice: 1;
-  }
-
-  .error404-text{
-    font-size: 2.5em;
-  }
-
-  .error404-button{
-    font-size: 1.5em;
-  }
-}
-/*---- 404 page end ----*/

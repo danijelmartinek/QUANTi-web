@@ -6,7 +6,7 @@
 @section('page_header')
     <div class="container-fluid">
         <h1 class="page-title">
-            <i class="{{ $dataType->icon }}"></i> {{ $dataType->display_name_plural }}
+            <i class="fa fa-bell-o"></i> {{ $dataType->display_name_plural }}
         </h1>
         @if(((Auth::user() -> role_id) == '1') or ((Auth::user() -> role_id) == '2'))
           @can('add',app($dataType->model_name))
@@ -24,13 +24,11 @@
     <div class="page-content browse container-fluid">
       @include('voyager::alerts')
       <div class="row-fluid">
-          @foreach($dataTypeContent as $data)
-            @if($data -> important == NULL)
-            @else
+
+	@if(($dataTypeContent -> where('important', '==', 1 ) -> first()) != NULL)
               <div class="notifications-featured-title"><h4>FEATURED</h4></div>
               <div class="col col-sm-12 col-md-12 col-lg-12 notifications-featured">
-            @endif
-          @endforeach
+	@endif
 
             @foreach($dataTypeContent as $data)
               @if($data -> important == '1')

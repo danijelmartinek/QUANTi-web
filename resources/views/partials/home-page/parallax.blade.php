@@ -1,161 +1,283 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <div class="parallax-container first-parallax-container center valign-wrapper">
 
-        <!-- CSRF Token -->
-        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ Voyager::setting('site.title') }}</title>
-        <link rel="icon" href="{{ Voyager::image(setting('site.logo')) }}">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <div class="container">
 
-        <!-- Styles -->
-        <link href="{{ URL::asset('css/custom.css') }}"  rel="stylesheet">
-        <link href="{{ URL::asset('css/text-animation.css') }}"  rel="stylesheet">
-        {!! MaterializeCSS::include_full() !!}
-        <link rel="stylesheet" href="http://yourdomain.com/materialize-css/css/materialize.min.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    </head>
 
-  <body>
-
-  @include('partials.layout.navbar-home')
-
-  <div>
-    <div class="parallax-container first-parallax-container center valign-wrapper">
-      <div class="container">
-        <div class="row">
-          <div class="header-title txt-white">
-            <h2>{{ setting('home-page.title_prefix') }}</h2>
-            <h1>{{ setting('home-page.title') }}</h1>
-          </div>
-          <a href="#section1" class="scrollTo"><div class="icon-scroll opacity-0-3 hover-opacity-1-0"></div></a>
-        </div>
-      </div>
-
-      <div class="parallax">
-        <img src="{{ Voyager::image(setting('home-page.main_image')) }}">
-        <div class="mask-black"></div>
-      </div>
-
-  </div>
-
-    <div id="section1" class="container">
       <div class="row">
-        <div class="animatable bounceInLeft center"><h3>{{ setting('home-page.section_one_title') }}</h3></div>
-        <div class="animatable bounceInRight">{!! setting('home-page.section_one_body') !!}</div>
-      </div>
-    </div>
 
-    <div class="parallax-container other-parallax-container center valign-wrapper">
-      <div class="parallax"><img src="{{ Voyager::image(setting('home-page.section_one_image')) }}"></div>
-    </div>
 
-    <div id="section2" class="container">
-     <div class="section">
-       <div class="row">
-         <div class="animatable bounceInRight center"><h3>{{ setting('home-page.section_two_title') }}</h3></div>
-         <div class="animatable bounceInLeft">{!! setting('home-page.section_two_body') !!}</div>
-       </div>
-      </div>
-      </div>
-    </div>
 
-    <div class="parallax-container other-parallax-container center valign-wrapper">
-      <div class="parallax"><img src="{{ Voyager::image(setting('home-page.section_two_image')) }}"></div>
-    </div>
+        <div class="header-title white-text">
 
-    <div id="section3" class="container">
-     <div class="section">
-       <div class="row">
-         <div class="animatable bounceInLeft center"><h3>{{ setting('home-page.section_three_title') }}</h3></div>
-         <div class="animatable bounceInRight">{!! setting('home-page.section_three_body') !!}</div>
-       </div>
+
+
+          <h2>{{ setting('site.title_prefix') }}</h2>
+
+
+
+          <h1>{{ setting('site.title') }}</h1>
+
+
+
+        </div>
+
+
+
+        <a href="#section1" class="scrollTo"><div class="icon-scroll opacity-0-3 hover-opacity-1-0"></div></a>
+
+
+
       </div>
-      </div>
+
+
+
     </div>
 
 
-    <div class="parallax-container other-parallax-container center valign-wrapper">
-      <div class="parallax"><img src="{{ Voyager::image(setting('home-page.section_three_image')) }}"></div>
+
+
+
+
+
+    <div class="parallax">
+
+
+
+      <img src="{{ URL::asset('storage/settings/home-page/home-main-image.jpg') }}">
+
+
+
+      <div class="mask-black"></div>
+
+
+
     </div>
 
-    <div id="section4" class="container">
-     <div class="section">
-       <div class="row">
-         <div class="animatable fadeInDown center"><h3>{{ setting('home-page.section_four_title') }}</h3></div>
-         <div class="animatable bounceIn">{!! setting('home-page.section_four_body') !!}</div>
-      </div>
-      </div>
-    </div>
+
+
   </div>
 
-    @include('partials.layout.footer')
 
-</body>
 
-    <script type="text/javascript">
-    $(document).ready(function(){
-      $('.parallax').parallax();
 
-      $(".dropdown-button").dropdown();
-      $(".button-collapse").sideNav();
 
-      $(function () {
-      $('a[href^="#"]').click(function(event) {
-      var id = $(this).attr("href");
-      var offset = 20;
-      var target = $(id).offset().top - offset;
 
-      $('html, body').animate({scrollTop:target}, 1000);
-      event.preventDefault();
-      });
-      });
 
-      // Trigger CSS animations on scroll.
-      // Detailed explanation can be found at http://www.bram.us/2013/11/20/scroll-animations/
+  <div id="section1" class="container">
 
-      // Looking for a version that also reverses the animation when
-      // elements scroll below the fold again?
-      // --> Check https://codepen.io/bramus/pen/vKpjNP
 
-      jQuery(function($) {
 
-        // Function which adds the 'animated' class to any '.animatable' in view
-        var doAnimations = function() {
+    <div class="row">
 
-          // Calc current offset and get all animatables
-          var offset = $(window).scrollTop() + $(window).height(),
-              $animatables = $('.animatable');
 
-          // Unbind scroll handler if we have no animatables
-          if ($animatables.size() == 0) {
-            $(window).off('scroll', doAnimations);
-          }
 
-          // Check all animatables and animate them if necessary
-      		$animatables.each(function(i) {
-             var $animatable = $(this);
-      			if (($animatable.offset().top + $animatable.height() - 20) < offset) {
-              $animatable.removeClass('animatable').addClass('animated');
-      			}
-          });
+      <div class="col s12 m12 l4 center p-font-image"><i class="fa fa-users" aria-hidden="true"></i></div>
 
-      	};
 
-        // Hook doAnimations on scroll, and trigger a scroll
-      	$(window).on('scroll', doAnimations);
-        $(window).trigger('scroll');
 
-      });
+      <div class="col s12 m12 l8 p-text animatable fadeInDown"><h3 class="center">Tko smo mi?</h3>
 
-    });
 
-    </script>
+
+        <p>Mi smo inicijativa osnovana 2017. godine u Križevcima s ciljem povezivanja informatičara, tehnologa i svih entuzijasta tehnologije u jednu zajednicu gdje jedni drugima pomažemo, dijelimo iskustva i savjete te motiviramo na učenje novih tehnologija koje nas okružuju.</p>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+  <div class="parallax-container other-parallax-container center valign-wrapper">
+
+
+
+    <div class="parallax"><img src="{{ URL::asset('storage/settings/home-page/home-image-1.jpg') }}"></div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+  <div id="section2" class="container">
+
+
+
+      <div class="row">
+
+
+
+      <div class="col s12 m12 l4 center p-font-image"><i class="fa fa-laptop" aria-hidden="true"></i></div>
+
+      
+
+        <div class="col s12 m12 l8 p-text animatable fadeInDown"><h3 class="center">Čime se bavimo?</h3>
+
+
+
+          <p>Prvenstveno se bavimo <b>Android</b> i <b>Web</b> programiranjem kojim želimo pomoći lokalnoj zajednici na način izrade <i>web stranica</i> i <i>mobilnih aplikacija</i> za neprofitne organizacije i ustanove, obrtnike, manje ili veće tvrtke, ne samo na području grada Križevaca već i na području cijele Hrvatske.
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+  <div class="parallax-container other-parallax-container center valign-wrapper">
+
+
+
+    <div class="parallax"><img src="{{ URL::asset('storage/settings/home-page/home-image-2.jpg') }}"></div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+  <div id="section3" class="container">
+
+
+
+      <div class="row">
+
+
+
+      <div class="col s12 m12 l4 center p-font-image"><i class="fa fa-handshake-o" aria-hidden="true"></i></div>
+
+      
+
+        <div class="col s12 m12 l8 p-text animatable fadeInDown"><h3 class="center">Kako se uključiti?</h3>
+
+
+
+          <p>Uključiti se možete preko e-mail adrese <a href="mailto:info@quanti.com.hr">info@quanti.com.hr</a> ili direktno odlaskom na stranicu "<a href="/contact">Kontakt</a>" i upisujući svoje ime i prezime, e-mail adresu te sadržaj poruke na za to predviđeno mjesto.
+
+          <br><p style="font-size: 1em !important;">Ukoliko se želite učlaniti u QUANTi inicijativu možete to napraviti pritiskom na gumb ispod te popunjavanjem forme.
+
+          <br><a href="/membership/register" class="waves-effect waves-light btn blue" style="margin: 0.5em 0 0 0 !important;">Učlanjivanje</a>
+
+          <br><span class="red-text" style="font-size: 0.7em !important;">*uvjet je registracija i prijava na stranicu</span>
+
+
+
+          <p>Otvoreni smo za nove ideje i savjete!</p></p>
+
+        
+
+        </div>
+
+
+
+      </div>
+
+
+
+      </div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="parallax-container other-parallax-container center valign-wrapper">
+
+
+
+    <div class="parallax"><img src="{{ URL::asset('storage/settings/home-page/home-image-3.jpg') }}"></div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+  <div id="section4" class="container">
+
+
+
+    <div class="row with-animation p-partners">
+
+
+
+        <div class="col s12 m12 l12 center"><h3>Partneri</h3></div>
+
+
+
+        <div class="col s12 m12 l12 center divider"></div>
+
+
+
+        <div class="col s12 m4 l4 center animatable fadeInDown"><img class="partners-logo" src="{{ URL::asset('storage/settings/home-page/krizevci-logo.png') }}"></div>
+
+
+
+        <div class="col s12 m4 l4 center animatable fadeInDown"><img class="partners-logo" src="{{ URL::asset('storage/settings/home-page/point-logo.png') }}"></div>
+
+
+
+        <div class="col s12 m4 l4 center animatable fadeInDown"><img class="partners-logo" src="{{ URL::asset('storage/settings/home-page/espr-logo.png') }}"></div>
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+
 </html>
+
+
+
+
+
+

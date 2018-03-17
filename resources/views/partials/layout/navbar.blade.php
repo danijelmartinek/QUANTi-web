@@ -10,10 +10,10 @@
         <li class="bold"><a href="{{ url('/admin') }}" class="waves-effect waves-teal">Dashboard</a></li>
       @endif
     @endif
-    <li><a href="{{ url('/profile') }}"><i class="voyager voyager-person"></i>
+    <!-- <li><a href="{{ url('/profile') }}"><i class="voyager voyager-person"></i>
              Profile
         </a>
-    </li>
+    </li> -->
     <li class="divider"></li>
     <li>
         <a href="{{ url('/logout') }}"
@@ -29,7 +29,9 @@
 
   <div class="container">
     <div class="nav-wrapper row">
-      <div class="col s4 m2 l2"><a href="/" class="brand-logo">{{ setting('site.title') }}</a></div>
+      <div class="col s4 m2 l2"><a href="/" class="brand-logo">
+	 <img style="height: 1.2em; margin-top: 0.45em" src="{{ URL::asset('storage/settings/layout/logo-white&text.png') }}">  
+      </a></div>
       <div class="col s6 m6 l6">
         <ul class="hide-on-med-and-down">
           {{ menu('page') }}
@@ -68,8 +70,10 @@
               <li class="bold"><a href="{{ url('/admin') }}" class="waves-effect waves-teal">Dashboard</a></li>
             @endif
           @endif
-        <li class="bold"><a href="{{ url('/profile') }}" class="waves-effect waves-teal">Profile</a></li>
-        <li class="bold"><a href="{{ url('/logout') }}" class="waves-effect waves-teal">Logout</a></li>
+        <!-- <li class="bold"><a href="{{ url('/profile') }}" class="waves-effect waves-teal">Profile</a></li> -->
+        <li class="bold"><a href="{{ url('/logout') }}" class="waves-effect waves-teal"
+	onclick="event.preventDefault();
+                     document.getElementById('logout-form').submit();">Logout</a></li>
         @endif
 
       </ul>
