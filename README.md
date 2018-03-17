@@ -3,7 +3,7 @@
 A website for QUANTi community.
 [https://quanti.com.hr/](https://quanti.com.hr/)
 
-<img src="https://preview.ibb.co/c84Mpc/quanti.png" alt="QUANTi-web" width="100%">
+<img src="./resources/assets/img/quanti-web.png" alt="QUANTi-web" width="100%">
 
 ----------
 ## Used technologies
@@ -32,4 +32,4 @@ A website for QUANTi community.
 
 ----------
 **Danijel Martinek**<br>
-<img src="https://preview.ibb.co/jpGbpc/logo_white_text_1.png" alt="QUANTi-logo" width="100">
+<img src="./resources/assets/img/logo-black&text.png" alt="QUANTi-logo" width="100">
