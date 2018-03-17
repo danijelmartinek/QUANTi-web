@@ -1,7 +1,6 @@
 # QUANTi web
 
-A website for QUANTi community.
-[https://quanti.com.hr/](https://quanti.com.hr/)
+> A website for QUANTi community. [https://quanti.com.hr/](https://quanti.com.hr/)
 
 <img src="./resources/assets/img/quanti-web.png" alt="QUANTi-web" width="100%">
 
