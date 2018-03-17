@@ -31,5 +31,5 @@ A website for QUANTi community.
 
 
 ----------
-**Danijel Martinek**<br>
+**© Danijel Martinek**<br>
 <img src="./resources/assets/img/logo-black&text.png" alt="QUANTi-logo" width="100">
